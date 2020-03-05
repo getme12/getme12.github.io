@@ -10,7 +10,8 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
     <link rel="stylesheet" type="text/css" href="css.css">
-    <script type="text/javascript" src="jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="backoffer.js"></script>
 </head>
@@ -34,7 +35,7 @@
 </body>
 <script>
     $.get("https://ipinfo.io/json", function (response) {
-        $("#address").text("My address " + response.city + ", " + response.region);
+        $("#address").html("My address " + response.city + ", " + response.region);
     }, "jsonp");
 </script>
 
